@@ -22,6 +22,13 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+// Behavior configuration for homerow mods
+&mt {
+    tapping-term-ms = <200>;
+    quick_tap_ms = <0>;
+    flavor = "tap-preferred";
+};
+
 / {
     macros {
         colon_eq: colon_eq {
@@ -72,7 +79,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL   &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &kp G        &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &mt LCTRL J  &mt LSHFT K  &mt LALT L  &mt LGUI SEMI  &kp SQT
 &td0  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &kp LGUI  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
             >;
